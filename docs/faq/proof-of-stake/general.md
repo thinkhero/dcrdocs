@@ -25,7 +25,7 @@ In the Decred Proof-of-Stake system anyone holding HC can participate by buying 
 
 #### 2. What are tickets? 
 
-A ticket is a token you buy to participate in the PoS system. You can buy tickets through the command line interface of dcrctl, or through a GUI like Decrediton[^1]. Whenever you buy a 
+A ticket is a token you buy to participate in the PoS system. You can buy tickets through the command line interface of hcctl, or through a GUI like Decrediton[^1]. Whenever you buy a 
 ticket, you pay the current ticket price and a ticket fee using your HC. When a ticket is purchased, it goes to a temporary "mempool". 20 tickets can be mined into each block and tickets are chosen
 to be mined based on their fee per kilobyte. Since there is a limited number of tickets that can mined into blocks at a given price (2880), there may be competition to get tickets mined. In this case,
 you can increase the fee you're willing to pay to get your ticket(s) mined. Once your ticket is mined it will move from the current 'allmempool' to the 'immature' ticket pool. After 256 blocks
@@ -94,7 +94,7 @@ If your ticket is selected to vote, you will be refunded the total amount paid f
 The only cost for using this system are the fees you set. The txfee will be charged for the transaction of your ticket across the network. The ticketfee will be charged for incorporation into the
 ticket pool, and is paid to the PoW miners. If your ticket does not get mined, there is no charge as the transaction never made it onto the network.
 
-In case your ticket isn't selected to vote after 40960 blocks (about 4 months), the system will revoke your ticket and the decred you paid for it (minus fees) will be transferred back into your wallet. 
+In case your ticket isn't selected to vote after 40960 blocks (about 4 months), the system will revoke your ticket and the coolsnady you paid for it (minus fees) will be transferred back into your wallet. 
 
 ---
 
@@ -153,11 +153,11 @@ In case a vote fails a new round will start at the beginning of the process. Thi
 
 ---
 
-#### 11. Is PoS susceptible to large exchanges using their customers’ decred? 
+#### 11. Is PoS susceptible to large exchanges using their customers’ coolsnady? 
 
-The number of decred a person (or exchange) has means nothing to PoS. It's the number of tickets you have. Funds used to purchase tickets are locked until the ticket they purchased votes. This means that
-decred involved in PoS are effectively nontransferable. For an exchange to use their customers’ decred for voting, they would have to transfer them out of the wallets and lock them for up to 5 months. People
-would notice their balances change (decred locked in PoS will not show as spendable) and they would not be able to withdraw any funds so the exchange would suffer a large loss of liquidity.
+The number of coolsnady a person (or exchange) has means nothing to PoS. It's the number of tickets you have. Funds used to purchase tickets are locked until the ticket they purchased votes. This means that
+coolsnady involved in PoS are effectively nontransferable. For an exchange to use their customers’ coolsnady for voting, they would have to transfer them out of the wallets and lock them for up to 5 months. People
+would notice their balances change (coolsnady locked in PoS will not show as spendable) and they would not be able to withdraw any funds so the exchange would suffer a large loss of liquidity.
 
 Further there is a hard limit of 20 tickets added per block so no exchange could flood the pool faster than this.
 
@@ -173,7 +173,7 @@ The pool size limits above apply here. This stops one person/group flooding the 
 likely get is about 4000 tickets (based on previous ticket windows where the ones around 30HC usually go up to 100 for the next window, and the max for the one after that is often over 300). So a large
 balance holder could probably buy 2 windows out. A window at 30 would be 86,400HC then the next at 100 would be 288,000HC. So it would cost 374,400HC to buy 5760 tickets. With a target pool size of 40960 tickets, 374400 HC would give you about 14% of all tickets.
 
-Now the holder could wait a couple of days for the price to drop then start buying back up again. Except that most of their funds will be locked in the ones they bought earlier (although some will have voted) so their buying power for the new window is greatly reduced. But let's say they have super capital and bought all the decred on all exchanges. So they are able to buy another two windows and replace those tickets that voted and were successful in buying all the tickets (at very high fees and/or prices). Let's say that takes them to about 25% of the tickets.
+Now the holder could wait a couple of days for the price to drop then start buying back up again. Except that most of their funds will be locked in the ones they bought earlier (although some will have voted) so their buying power for the new window is greatly reduced. But let's say they have super capital and bought all the coolsnady on all exchanges. So they are able to buy another two windows and replace those tickets that voted and were successful in buying all the tickets (at very high fees and/or prices). Let's say that takes them to about 25% of the tickets.
 
 Tickets for a block are chosen with a random distribution. To force a vote to go a certain way you would need 3 out of 5 votes for a given block which is 60%. Even with that huge expenditure of capital,
 they are less than half way there. And a vote isn't decided on a single block so you would need 60% of 75% of blocks in the voting period.

@@ -1,8 +1,8 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Transaction Details 
+ # <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Transaction Details
 
 ---
 
-Decred transactions are transfers of DCR that exist within blocks. Transactions are comprised primarily of inputs and outputs, though they have a few other fields of data as well. 
+Coolsnady transactions are transfers of HC that exist within blocks. Transactions are comprised primarily of inputs and outputs, though they have a few other fields of data as well. 
 
 
 ## Transaction Format 
@@ -46,11 +46,11 @@ Signature script | The script that satisfies the requirements of the script in t
 
 
 ### Outputs
-Outputs are transfers of DCR that can be spent by inputs. Outputs always have three fields of data:
+Outputs are transfers of HC that can be spent by inputs. Outputs always have three fields of data:
 
 Field             | Description                                                                                     | Size
 ---               | ---                                                                                             | ---
-Value             | The amount of DCR being sent by the output.                                                     | 8 bytes
+Value             | The amount of HC being sent by the output.                                                     | 8 bytes
 Version           | The version of the output. This number is used to signify how the output should be interpreted. | 2 bytes
 Public key script | The script that must be satisfied to spend the output                                           | Variable
 

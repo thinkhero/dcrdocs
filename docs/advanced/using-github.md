@@ -39,7 +39,7 @@ $ git checkout -b <feature_branch>
 ```bash
 $ git push <yourname> <feature_branch>
 ```
-- With your browser, navigate to https://github.com/decred/dcrd
+- With your browser, navigate to https://github.com/coolsnady/hcd
 - Create a pull request with the GitHub UI. You can request a reviewer on the GitHub web page or you can ask someone on irc/slack.
 
 ## Rebasing one of your existing pull requests 

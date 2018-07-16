@@ -21,7 +21,7 @@ The newest binary releases can be found [here](https://github.com/decred/decred-
 
 2. Navigate to download location and extract the `.zip` file:
 
-    Right click on the `.zip` file, select "Extract All..." and a prompt should open asking for the directory to use. The default will extract the `.zip` to a folder with the same name. It should include `dcrctl`, `dcrd`, `dcrwallet`, `sample-dcrctl.conf`, `sample-dcrd.conf`, and `sample-dcrwallet.conf`.
+    Right click on the `.zip` file, select "Extract All..." and a prompt should open asking for the directory to use. The default will extract the `.zip` to a folder with the same name. It should include `hcctl`, `hcd`, `hcwallet`, `sample-hcctl.conf`, `sample-hcd.conf`, and `sample-hcwallet.conf`.
 
 ## macOS
 
@@ -36,7 +36,7 @@ The newest binary releases can be found [here](https://github.com/decred/decred-
     **Finder:** simply double click on the `.tar.gz` file.  
     **Terminal:** use the `tar -xvzf filename.tar.gz` command.
 
-    Both of these should extract the `.tar.gz` file into a folder that shares the same name. (e.g. `tar -xvzf decred-darwin-amd64-v1.2.0.tar.gz` should extract to `decred-darwin-amd64-v1.2.0`). It should include `dcrctl`, `dcrd`, `dcrwallet`, `sample-dcrctl.conf`, `sample-dcrd.conf`, and `sample-dcrwallet.conf`.
+    Both of these should extract the `.tar.gz` file into a folder that shares the same name. (e.g. `tar -xvzf decred-darwin-amd64-v1.2.0.tar.gz` should extract to `decred-darwin-amd64-v1.2.0`). It should include `hcctl`, `hcd`, `hcwallet`, `sample-hcctl.conf`, `sample-hcd.conf`, and `sample-hcwallet.conf`.
 
 !!! note
 
@@ -58,15 +58,15 @@ The newest binary releases can be found [here](https://github.com/decred/decred-
     **Ubuntu File Browser:** simply right click on the `.tar.gz` file and select "Extract Here".  
     **Terminal:** use the `tar -xvzf filename.tar.gz` command.
 
-    Both of these should extract the `.tar.gz` file into a folder that shares the same name. (e.g. `tar -xvzf decred-linux-amd64-v1.2.0.tar.gz` should extract to `decred-linux-amd64-v1.2.0`). It should include `dcrctl`, `dcrd`, `dcrwallet`, `sample-dcrctl.conf`, `sample-dcrd.conf`, and `sample-dcrwallet.conf`.
+    Both of these should extract the `.tar.gz` file into a folder that shares the same name. (e.g. `tar -xvzf decred-linux-amd64-v1.2.0.tar.gz` should extract to `decred-linux-amd64-v1.2.0`). It should include `hcctl`, `hcd`, `hcwallet`, `sample-hcctl.conf`, `sample-hcd.conf`, and `sample-hcwallet.conf`.
 
 ---
 
 ## Minimum Configuration
 
-At the very minimum, for `dcrd`, `dcrwallet`, and `dcrctl` to be able to communicate with each other, they need to be launched with the same `rpcuser`/`rpcpass` combination. For manual configuration please follow these steps:
+At the very minimum, for `hcd`, `hcwallet`, and `hcctl` to be able to communicate with each other, they need to be launched with the same `rpcuser`/`rpcpass` combination. For manual configuration please follow these steps:
 
-1. If the OS-specific home directories listed in [Configuration File Locations](/getting-started/startup-basics#configuration-file-locations) do not exist, please create them for `dcrd`, `dcrwallet`, and `dcrctl`.
+1. If the OS-specific home directories listed in [Configuration File Locations](/getting-started/startup-basics#configuration-file-locations) do not exist, please create them for `hcd`, `hcwallet`, and `hcctl`.
 
 2. Choose an arbitrary username and password, these will only be used for each application to communicate via remote procedure call. The easiest configuration is to set them all equal.
 
@@ -76,7 +76,7 @@ At the very minimum, for `dcrd`, `dcrwallet`, and `dcrctl` to be able to communi
         rpcuser=<chosen-username>
         rpcpass=<chosen-password>
 
-    Save it as `dcrd.conf` in `dcrd`'s home directory.
+    Save it as `hcd.conf` in `hcd`'s home directory.
 
 4. Create another new text file and add the following lines:
 
@@ -84,7 +84,7 @@ At the very minimum, for `dcrd`, `dcrwallet`, and `dcrctl` to be able to communi
         username=<chosen-username>
         password=<chosen-password>
 
-    Save it as `dcrwallet.conf` in `dcrwallet`'s home directory.
+    Save it as `hcwallet.conf` in `hcwallet`'s home directory.
 
 5. Create a third text file and add the following lines:
 
@@ -92,6 +92,6 @@ At the very minimum, for `dcrd`, `dcrwallet`, and `dcrctl` to be able to communi
         rpcuser=<chosen-username>
         rpcpass=<chosen-password>
 
-    Save it as `dcrctl.conf` in `dcrctl`'s home directory.
+    Save it as `hcctl.conf` in `hcctl`'s home directory.
 
-Please see the [sample config](https://github.com/decred/dcrd/blob/master/sampleconfig/sampleconfig.go#L8-L352) for more customization options.
+Please see the [sample config](https://github.com/decred/hcd/blob/master/sampleconfig/sampleconfig.go#L8-L352) for more customization options.

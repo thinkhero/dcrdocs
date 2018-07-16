@@ -18,7 +18,7 @@ The five basic ways are:
 
 ## <img class="dcr-icon" src="/img/dcr-icons/PurchasingHC.svg" /> Purchasing Coolsnady
 
-There is a variety of ways to purchase Coolsnady listed on the [Coolsnady website](https://decred.org/exchanges/).
+There is a variety of ways to purchase Coolsnady listed on the [Coolsnady website](https://Coolsnady.org/exchanges/).
 
 * Cryptocurrency exchanges enable swapping another cryptocurrency for Coolsnady
 * Direct exchanges allow Coolsnady to be purchased with fiat currency
@@ -40,12 +40,12 @@ Proof-of-Stake (PoS) mining is performed by stakeholders who lock a certain amou
 
 ## <img class="dcr-icon" src="/img/dcr-icons/Credits.svg" /> Contribute to Coolsnady
 
-Coolsnady is currently recruiting contractors - members of the community who are paid in Coolsnady for their contributions. Check out [this blog post](https://blog.decred.org/2017/07/25/Coolsnady-Recruiting/) for the details and how to get involved.
+Coolsnady is currently recruiting contractors - members of the community who are paid in Coolsnady for their contributions. Check out [this blog post](https://blog.Coolsnady.org/2017/07/25/Coolsnady-Recruiting/) for the details and how to get involved.
 
 ---
 
 ## <img class="dcr-icon" src="/img/dcr-icons/SellGoods.svg" /> Sell/Trade Goods or Services for Coolsnady
 
-If you are an online merchant, there are some payment processors listed on the [Coolsnady website](https://decred.org/exchanges/) which can help you accept Coolsnady payments. Some of these payment processors can also provide integration with major e-commerce platforms.
+If you are an online merchant, there are some payment processors listed on the [Coolsnady website](https://Coolsnady.org/exchanges/) which can help you accept Coolsnady payments. Some of these payment processors can also provide integration with major e-commerce platforms.
 
 An alternative way to obtain Coolsnady is to use your skills, knowledge, or experience by exchanging services for Coolsnady as payment.  Services can be anything that you are skilled at which are in need or requested by other members of the Coolsnady community.

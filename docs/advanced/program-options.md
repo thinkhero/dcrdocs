@@ -3,13 +3,13 @@
 ---
 
 The default options are sane for most users, although you may need to
-set your credentials. This means `dcrd` will
+set your credentials. This means `hcd` will
 work 'out of the box' for most users. However, there are also a wide
 variety of flags that can be used to control its behavior. The following section
 provides a usage overview which enumerates the flags. An interesting
 point to note is that the long form of all of these options (except
 `-C`) can be specified in a configuration file that is automatically
-parsed when dcrd starts up.
+parsed when hcd starts up.
 The `-C` (`--configfile`)
 flag, as shown below, can be used to override the default location.
 You can always get a list of all options by using the `-h` flag.
@@ -19,7 +19,7 @@ You can always get a list of all options by using the `-h` flag.
 ## Usage
 
 ```
-dcrd [OPTIONS]
+hcd [OPTIONS]
 ```
 
 ---
@@ -28,11 +28,11 @@ dcrd [OPTIONS]
 
 Option                      | Description
 ---                         | ---
-`-A` or `--appdata=`        | Path to dcrd home directory ($HOME/.dcrd)
+`-A` or `--appdata=`        | Path to hcd home directory ($HOME/.hcd)
 `-V` or `--version`         | Display version information and exit
 `-C` or `--configfile=`     | Path to configuration file
 `-b` or `--datadir=`        | Directory to store data
-`--logdir=`                 | Directory to log output. ($HOME/.dcrd/logs)
+`--logdir=`                 | Directory to log output. ($HOME/.hcd/logs)
 `-a` or `--addpeer=`        | Add a peer to connect with at startup
 `--connect=`                | Connect only to the specified peers at startup
 `--nolisten`                | Disable listening for incoming connections -- NOTE: Listening is automatically disabled if the `--connect` or `--proxy` options are used without also specifying listen interfaces via `--listen`
@@ -74,7 +74,7 @@ Option                      | Description
 `--miningtimeoffset=`       | Offset the mining timestamp of a block by this many seconds (positive values are in the past)
 `-d` or `--debuglevel:`     | Logging level for all subsystems {trace, debug, info, warn, error, critical} -- You may also specify &lt;subsystem&gt;=&lt;level&gt;,&lt;subsystem2&gt;=&lt;level&gt;,... to set the log level for individual subsystems -- Use show to list available subsystems (info)
 `--upnp`                    | Use UPnP to map our listening port outside of NAT
-`--minrelaytxfee`           | The minimum transaction fee in DCR/kB to be considered a non-zero fee. (default: 0.001)
+`--minrelaytxfee`           | The minimum transaction fee in hc/kB to be considered a non-zero fee. (default: 0.001)
 `--limitfreerelay=`         | Limit relay of transactions with no transaction fee to the given amount in thousands of bytes per minute (15)
 `--norelaypriority`         | Do not require free or low-fee transactions to have high priority for relaying
 `--maxorphantx=`            | Max number of orphan transactions to keep in memory (1000)
@@ -119,7 +119,7 @@ the background. Let's have a look at some of the information
 available:
 
 ```
-dcrctl -u <username> - P <password> --wallet <command>
+hcctl -u <username> - P <password> --wallet <command>
 ```
 
 ```getbalance ("account" minconf=1 "balancetype")``` Gets the balance
@@ -153,8 +153,8 @@ Output             | Description
 ---                |---
 `blockheight`      | The lastest block number.
 `poolsize`         | The number of tickets currently in the voting pool.
-`difficulty`       | This is the cost of a ticket. It goes up or down depending on the number of tickets currently in the pool as well as the number of tickets over the last 2880 blocks using an exponential moving average <LINK>Source(https://github.com/decred/dcrd/blob/master/chaincfg/params.go#L336). The network will adjust the price to try to keep the pool size near the target of 40,960 tickets. Note this doesn't mean the price will always go up if above this number, nor will it always go down if below. The rate that tickets enter the pool also affects the price. It is adjusted every 144 blocks.
-`allmempooltix`    | Only 20 tickets per block are accepted into the voting pool. Extra tickets wait in the mempool. Tickets are accepted into the voting pool according to ticketfee which is 0.001 DCR/kB by default. See PoS mining#Purchasing-Tickets for more information.
+`difficulty`       | This is the cost of a ticket. It goes up or down depending on the number of tickets currently in the pool as well as the number of tickets over the last 2880 blocks using an exponential moving average <LINK>Source(https://github.com/decred/hcd/blob/master/chaincfg/params.go#L336). The network will adjust the price to try to keep the pool size near the target of 40,960 tickets. Note this doesn't mean the price will always go up if above this number, nor will it always go down if below. The rate that tickets enter the pool also affects the price. It is adjusted every 144 blocks.
+`allmempooltix`    | Only 20 tickets per block are accepted into the voting pool. Extra tickets wait in the mempool. Tickets are accepted into the voting pool according to ticketfee which is 0.001 hc/kB by default. See PoS mining#Purchasing-Tickets for more information.
 `ownmempooltix`    | Your tickets that are waiting in the mempool.
 `immature`         | All tickets have a 256 (about a day) maturity time during which they cannot be selected to vote. This indicates how many of your tickets are in this state.
 `live`             | Tickets in the voting pool that are active and able to vote when selected.
@@ -168,14 +168,14 @@ Output             | Description
 
 ---
 
-## dcrctl parameters
+## hcctl parameters
 
 ### Chain server commands
 
 Note that some commands have been omitted from this list. They include
 duplicate commands, unimplemented commands and those that have limited
 utility to the general userbase.  You can always see all commands
-with `dcrctl -l`.
+with `hcctl -l`.
 
 Command              | Description
 ---                  | ---
@@ -189,7 +189,7 @@ Command              | Description
 `getnettotals`       | Gets the amount of data sent and received by the daemon.
 `getpeerinfo`        | Similar to getnettotals, includes network data transfer, time connected, block height when daemon was started and current block height.
 `getstakedifficulty` | Returns current PoS difficulty.
-`getticketpoolvalue` | Gets the DCR value of all tickets in the pool.
+`getticketpoolvalue` | Gets the hc value of all tickets in the pool.
 `help ("command")`   | Show the help for a command.
 `missedtickets`      | Show all of your tickets that missed voting.
 `rebroadcastmissed` | Rebroadcast missed tickets to the network. This is done automatically upon starting the wallet.
@@ -213,7 +213,7 @@ Command                                                                         
 `getbalancetomaintain`                                                          | This is the minimum balance to maintain in the wallet when using auto stake buying.
 `getmasterpubkey`                                                               | Get the public key for your wallet. This will allow people to view, but not spend funds in your wallet. It is safe to provide to others.
 `getnewaddress ("account" verbose=false)`                                       | Get a new address in the given account.
-`getreceivedbyaccount "account" (minconf=1)`                                    | Gets the total amount of DCR ever received by this wallet. This includes stake returns so it could be quite large if you're PoS mining.
+`getreceivedbyaccount "account" (minconf=1)`                                    | Gets the total amount of hc ever received by this wallet. This includes stake returns so it could be quite large if you're PoS mining.
 `getreceivedbyaddress "address" (minconf=1)`                                    | Get funds received by the given address.
 `getseed`                                                                       | Disabled on mainnet for security.
 `getstakeinfo`                                                                  | Retrieve useful information on the current status of the PoS pool. See <LINK>PoS Commands.
@@ -222,13 +222,13 @@ Command                                                                         
 `gettickets includeimmature`                                                    | Get all your current tickets. Second argument should be true if you want to see immature tickets too.
 `gettransaction "txid" (includewatchonly=false)`                                | Get the transaction associated with the given id.
 `listaccounts (minconf=1)`                                                      | See all accounts and their spendable balance in your wallet.
-`listreceivedbyaccount (minconf=1 includeempty=false includewatchonly=false)`   | Get a list of all your accounts and the amount of DCR that has been received by them.
-`listreceivedbyaddress (minconf=1 includeempty=false includewatchonly=false)`   | Get a list of all your addresses and the amount of DCR that has been received by them.
+`listreceivedbyaccount (minconf=1 includeempty=false includewatchonly=false)`   | Get a list of all your accounts and the amount of hc that has been received by them.
+`listreceivedbyaddress (minconf=1 includeempty=false includewatchonly=false)`   | Get a list of all your addresses and the amount of hc that has been received by them.
 `listsinceblock ("blockhash" targetconfirmations=1 includewatchonly=false)`     | List transactions that have occurred since the given block hash.
 `listtransactions ("account" count=10 from=0 includewatchonly=false)`           | List the number of transactions as specified by ‘count' in the given account.
 `purchaseticket "fromaccount" spendlimit (minconf=1 "ticketaddress" "comment")` | Manually purchase PoS tickets. ‘fromaccount' will usually be "default". ‘spendlimit' is the amount you want to spend on tickets in total, not per ticket.
 `renameaccount "oldaccount" "newaccount"`                                       | Rename an account in your wallet.
-`sendfrom "fromaccount" "toaddress" amount (minconf=1 "comment" "commentto")`   | Send DCR from the given account to the given address. You can add an optional comment.
+`sendfrom "fromaccount" "toaddress" amount (minconf=1 "comment" "commentto")`   | Send hc from the given account to the given address. You can add an optional comment.
 `sendtoaddress "address" amount ("comment" "commentto")`                        | Similar to above but uses the default account to send from.
 `setbalancetomaintain balance`                                                  | Used for auto staking. The wallet will auto buy tickets until it reaches this threshold.
 `setticketfee fee`                                                              | Set the (non-refundable) fee for purchasing stake tickets. See <LINK>FAQ#Ticket fee

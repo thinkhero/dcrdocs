@@ -115,7 +115,7 @@ Decred address of the recipient.
 
 > Step Two
 
-In `Amount`, enter the value in DCR to send to the recipient. If you
+In `Amount`, enter the value in HC to send to the recipient. If you
 wish you can type an optional message in the `Note` field. Press
 `Send`. The `Use Unconfirmed Funds` option lets you use funds that the
 network knows are being sent to you but have not yet been confirmed by
@@ -133,7 +133,7 @@ required funds have been confirmed.
 Click the `Receive` button at the bottom of the window. You will see
 this screen:
 
-Give the person sending you DCR the address displayed (it will start
+Give the person sending you HC the address displayed (it will start
 with `Ds`) or they can use the QR code if their wallet or service
 accepts them. You can use the same address as often as you want, but
 for privacy it is recommended that you generate a new address each

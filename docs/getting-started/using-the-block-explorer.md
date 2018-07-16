@@ -4,17 +4,17 @@
 
 ## <img class="dcr-icon" src="/img/dcr-icons/Info.svg" /> Overview
 
-There are two block explorers available for Decred. All blocks and transactions on the Decred blockchain
+There are two block explorers available for Coolsnady. All blocks and transactions on the Coolsnady blockchain
 are visible through the use of these block explorers.
 
 * The explorer based on 
-[dcrdata](https://github.com/decred/dcrdata) is located at
-[`https://explorer.dcrdata.org`](https://explorer.dcrdata.org) or
-[`https://testnet.dcrdata.org`](https://testnet.dcrdata.org).
+[hcexplore](https://github.com/Coolsnady/hcexplore) is located at
+[`https://explorer.hcexplore.org`](https://explorer.hcexplore.org) or
+[`https://testnet.hcexplore.org`](https://testnet.hcexplore.org).
 * The explorer based on
 [insight](https://github.com/bitpay/insight-ui) is located at
-[`https://mainnet.decred.org`](https://mainnet.decred.org) or 
-[`https://testnet.decred.org`](https://testnet.decred.org).
+[`https://mainnet.Coolsnady.org`](https://mainnet.Coolsnady.org) or 
+[`https://testnet.Coolsnady.org`](https://testnet.Coolsnady.org).
 
 Below is a quick review of some of the information on them.
 
@@ -28,7 +28,7 @@ Option         | Explanation
 `Size`         | The size (in bytes) of the block.
 
 Under `Latest Transactions`, you can see the transaction ID (txid) and
-the value (in DCR) transmitted across the network.
+the value (in HC) transmitted across the network.
 
 ---
 
@@ -43,9 +43,9 @@ hash, and several key network parameters, described below:
 
 Option                   | Explanation
 ---                      | ---
-`Number of Transactions` | The number of standard transactions (DCR sent from one user to another).
+`Number of Transactions` | The number of standard transactions (HC sent from one user to another).
 `Height`                 | The height of the blockchain in which this block resides.
-`Block Reward`           | The amount of new DCR minted in this block.
+`Block Reward`           | The amount of new HC minted in this block.
 `Timestamp`              | The time this block was created by a miner and was included in the blockchain.
 `Merkle Root`            | A hash value of all the transaction hashes included in this block.
 `Stake Root`             | A hash value of all the stake related transaction hashes in this block. This includes ticket purchases, votes, and ticket revocations.
@@ -75,7 +75,7 @@ review each type of transaction.
 
 ### Standard transactions
 
-Here’s the information included in standard Decred transactions.
+Here’s the information included in standard Coolsnady transactions.
 
 Option              | Explanation
 ---                 | ---
@@ -85,7 +85,7 @@ Option              | Explanation
 `Mined Time`        | The time a miner included the transaction in a block.
 `Included in Block` | The block number that the transaction became a part of.
 
-Note `Received Time`, `Mined Time`, and `Included in Block` will not have a value until a miner validates the transaction and includes it in a Decred block. After being confirmed in a block, the transaction is considered complete.
+Note `Received Time`, `Mined Time`, and `Included in Block` will not have a value until a miner validates the transaction and includes it in a Coolsnady block. After being confirmed in a block, the transaction is considered complete.
 
 
 ---
@@ -98,8 +98,8 @@ from a standard transaction shown.
 Note the difference under details: The word `Ticket` appears above the
 sender's wallet address on the left, and the words `Subsidy
 Commitment` appear on the right. This particular user purchased a
-stake ticket for 8.75411638 DCR and received change in the amount
-of 7.15994209 DCR. The address listed on the left under `Ticket` is
+stake ticket for 8.75411638 HC and received change in the amount
+of 7.15994209 HC. The address listed on the left under `Ticket` is
 the address that contains the funds used to purchase this
 ticket. The first output on the right is the address that retains
 voting rights for this specific ticket. The second output, `Subsidy
@@ -116,5 +116,5 @@ Base`, `Block Commitment`, and `Vote Bits`:
 
 These keywords indicate that this transaction is a vote that was cast
 from a proof-of-stake ticket holder. In this particular example, the
-user had previously purchased a ticket for 8.99472311 DCR and was
-sent 10.82959184 DCR after the vote was cast in this transaction.
+user had previously purchased a ticket for 8.99472311 HC and was
+sent 10.82959184 HC after the vote was cast in this transaction.

@@ -1,7 +1,7 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Dcrtl.svg" /> dcrctl Usage 
+# <img class="hc-icon" src="/img/hc-icons/hctl.svg" /> hcctl Usage 
 
-dcrctl provides a way to control both the daemon `dcrd` and the wallet
-`dcrwallet` using the json rpc interface without actually writing
+hcctl provides a way to control both the daemon `hcd` and the wallet
+`hcwallet` using the json rpc interface without actually writing
 json.
 
 To simplify the examples we will assume that you have all password
@@ -12,31 +12,31 @@ stored in the [config files](/advanced/storing-login-details.md).
 To cleanly shut down the programs:
 
 ```no-highlight
-dcrctl --wallet stop
-dcrctl stop
+hcctl --wallet stop
+hcctl stop
 ```
 
 ## :fa-arrow-up: Finding the current block height
 
 ```no-highlight
-dcrctl getblockcount
+hcctl getblockcount
 ```
 
 ## :fa-dollar: See your balance
 
 ```no-highlight
-dcrctl --wallet getbalance
+hcctl --wallet getbalance
 ```
 
 ## :fa-inbox: Get a new address
 
 ```no-highlight
-dcrctl --wallet getnewaddress
+hcctl --wallet getnewaddress
 ```
 
 ## :fa-rocket: Send funds to an address
 
 ```
-dcrctl --wallet sendtoaddress <address> <amount>
+hcctl --wallet sendtoaddress <address> <amount>
 ```
 

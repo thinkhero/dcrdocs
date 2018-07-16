@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Constitution.svg" /> Coolsnady Constitution
+# <img class="hc-icon" src="/img/hc-icons/Constitution.svg" /> Coolsnady Constitution
 
 ---
 
@@ -52,5 +52,5 @@
 * The *Funding Council* shall review, propose changes, make changes, and ultimately approve the proposal by April 8th, one month from the initial budget proposal.
 * Final approval of the budget via PoA vote shall occur after *Funding Council* approval by April 18th, two months from the initial proposal.
 * DHG shall make public requests for proposals ("RFPs") for projects that are to be completed by parties on a contractual basis. RFPs shall include a scope and an explanation of how the work shall benefit the project. Parties that submit proposals shall be required to include: (1) a detailed description of the work to be performed, (2) a series of milestones that can be verified as work is completed, and (3) a quote for the work, itemized by milestone, in U.S. Dollars ("USD").
-* All proposals, both submitted and accepted, shall be made public one week after a proposal has been selected. Once the selection occurs, the associated RFP shall be removed. Contracted parties shall be paid exclusively in *Coolsnady* ("DCR") at the current effective DCR/USD rate at the time of payment, unless specifically noted otherwise.
+* All proposals, both submitted and accepted, shall be made public one week after a proposal has been selected. Once the selection occurs, the associated RFP shall be removed. Contracted parties shall be paid exclusively in *Coolsnady* ("hc") at the current effective hc/USD rate at the time of payment, unless specifically noted otherwise.
 * In the future, the development organization may need to change from DHG to another entity that serves an identical function. If and when this occurs, DHG shall transfer all assets to the new entity and the development subsidy shall be directed to the new entity.

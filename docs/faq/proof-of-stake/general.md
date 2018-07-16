@@ -14,19 +14,19 @@ decide on their own to change the rules of the network (a 51% attack). Or, when 
 the chain.
 
 The PoS system rewards participants for their staking. Every Decred block has a PoS reward component that will be distributed to every ticket chosen to vote in that block. The system is designed in such a 
-way that the average time for the ticket to be selected is 28 days. If a ticket hasn't been selected after 40960 blocks (a bit under 5 months) it will be revoked by the system. The DCR used to purchase a
+way that the average time for the ticket to be selected is 28 days. If a ticket hasn't been selected after 40960 blocks (a bit under 5 months) it will be revoked by the system. The HC used to purchase a
  ticket is returned regardless of whether or not it votes.
 
 Another interesting feature this PoS system allows for is the ability to vote on an agenda. Because the block validation can be considered a vote, by adding extra votebit components to the ticket the system can track and count votes over a series of blocks. These votes can be about anything.
 
-In the Decred Proof-of-Stake system anyone holding DCR can participate by buying a ticket.
+In the Decred Proof-of-Stake system anyone holding HC can participate by buying a ticket.
 
 ---
 
 #### 2. What are tickets? 
 
 A ticket is a token you buy to participate in the PoS system. You can buy tickets through the command line interface of dcrctl, or through a GUI like Decrediton[^1]. Whenever you buy a 
-ticket, you pay the current ticket price and a ticket fee using your DCR. When a ticket is purchased, it goes to a temporary "mempool". 20 tickets can be mined into each block and tickets are chosen
+ticket, you pay the current ticket price and a ticket fee using your HC. When a ticket is purchased, it goes to a temporary "mempool". 20 tickets can be mined into each block and tickets are chosen
 to be mined based on their fee per kilobyte. Since there is a limited number of tickets that can mined into blocks at a given price (2880), there may be competition to get tickets mined. In this case,
 you can increase the fee you're willing to pay to get your ticket(s) mined. Once your ticket is mined it will move from the current 'allmempool' to the 'immature' ticket pool. After 256 blocks
 (about 20 hours) it then will mature and go into the live ticket pool where it is eligible to be chosen to vote.
@@ -59,13 +59,13 @@ The ticket price is always refunded no matter if your ticket votes, misses or ex
 
 The PoS system utilizes two types of fees, a txfee (also known as a 'split' fee) and a ticketfee.
 	
-The txfee is a fee you pay the network for handling the transaction to buy your ticket. This fee is at default set to a low amount (0.001 DCR/kB) and should not be changed.
+The txfee is a fee you pay the network for handling the transaction to buy your ticket. This fee is at default set to a low amount (0.001 HC/kB) and should not be changed.
 The ticketfee is the fee you pay if your ticket gets mined. This fee is an incentive for PoW miners to mine your ticket and add it to the ticket pool.
 
 In case the buying window is full, meaning there are more tickets being bought than there are available to be mined during that window, the ticketfee will be used to determine which tickets get put into
 the ticket pool. The tickets with the highest ticketfee will be selected by the PoW miners.
 
-Fees are calculated in DCR per kilobyte. Since a ticket is only about 300 (solo) or 540 (pool) bytes in size, the actual fees you pay will be lower than what you set as the specific fee amount.
+Fees are calculated in HC per kilobyte. Since a ticket is only about 300 (solo) or 540 (pool) bytes in size, the actual fees you pay will be lower than what you set as the specific fee amount.
 
 Both txfees and ticketfees will not be returned when a ticket votes, expires, or misses a vote.
 
@@ -116,7 +116,7 @@ By adding another parameter to the ticket that doesn't interfere with the approv
 
 For example, you could choose the color of your ticket to be either red or blue, set that option, and the system will count for the next 1000 blocks how many red tickets and how many blue tickets there are. Maybe there are 3000 red tickets, 1500 blue tickets, and 500 that didn't select a colour.
 
-If you replace the red or blue option with a yes or no option, you have a voting system that can count votes over time. By using the PoS voting system anyone who holds DCR can vote on issues set in an agenda.
+If you replace the red or blue option with a yes or no option, you have a voting system that can count votes over time. By using the PoS voting system anyone who holds HC can vote on issues set in an agenda.
 
 This voting system can be used for any governance issue. For Decred, the most prominent use will be to vote on hardforks, which are technical changes to the way the currency works. Some examples:
 
@@ -162,7 +162,7 @@ would notice their balances change (decred locked in PoS will not show as spenda
 Further there is a hard limit of 20 tickets added per block so no exchange could flood the pool faster than this.
 
 Finally, there's a soft cap on the total number of tickets in the pool. Every 144 blocks (2880 tickets) the ticket price is adjusted based on the number of tickets in the pool and the rate that new tickets
-were added in the last window. Eventually the ticket price would be so high that even an exchange wouldn't be able to buy many tickets. And remember that even if they did that their DCR are locked so they
+were added in the last window. Eventually the ticket price would be so high that even an exchange wouldn't be able to buy many tickets. And remember that even if they did that their HC are locked so they
 can't buy more when the price drops again.
 
 ---
@@ -170,8 +170,8 @@ can't buy more when the price drops again.
 #### 12. Is PoS susceptible to influence from large balance holders such as the original developers? 
 
 The pool size limits above apply here. This stops one person/group flooding the PoS pool with large numbers of their own tickets. Even if they bought up the whole pool (with huge fees) the most they would
-likely get is about 4000 tickets (based on previous ticket windows where the ones around 30DCR usually go up to 100 for the next window, and the max for the one after that is often over 300). So a large
-balance holder could probably buy 2 windows out. A window at 30 would be 86,400DCR then the next at 100 would be 288,000DCR. So it would cost 374,400DCR to buy 5760 tickets. With a target pool size of 40960 tickets, 374400 DCR would give you about 14% of all tickets.
+likely get is about 4000 tickets (based on previous ticket windows where the ones around 30HC usually go up to 100 for the next window, and the max for the one after that is often over 300). So a large
+balance holder could probably buy 2 windows out. A window at 30 would be 86,400HC then the next at 100 would be 288,000HC. So it would cost 374,400HC to buy 5760 tickets. With a target pool size of 40960 tickets, 374400 HC would give you about 14% of all tickets.
 
 Now the holder could wait a couple of days for the price to drop then start buying back up again. Except that most of their funds will be locked in the ones they bought earlier (although some will have voted) so their buying power for the new window is greatly reduced. But let's say they have super capital and bought all the decred on all exchanges. So they are able to buy another two windows and replace those tickets that voted and were successful in buying all the tickets (at very high fees and/or prices). Let's say that takes them to about 25% of the tickets.
 
@@ -180,7 +180,7 @@ they are less than half way there. And a vote isn't decided on a single block so
 
 And THEN you still need the PoW miners to confirm the votes. If they think someone is trying to game the system, they can choose to invalidate blocks.
 
-So basically this is close to impossible, even if a single person has a HUGE percentage of DCR.
+So basically this is close to impossible, even if a single person has a HUGE percentage of HC.
 
 But then we come to the stake pools. Stake pools, while not having access to any of their users' funds, do have the ability to change votes on tickets assigned to them. This is why it is suggested that when joining a stake pool, people don't just go for the largest one. Decred is short for 'decentralised credit' so part of the spirit of PoS is ensuring that the PoS stake pools don't get too large in relation to the others. However, even the largest at almost 20% would still only get on average one vote per block.
 

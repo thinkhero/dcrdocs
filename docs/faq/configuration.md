@@ -2,16 +2,16 @@
 
 ---
 
-#### 1. What are the default ports `dcrd` and `dcrwallet` listen on?
+#### 1. What are the default ports `hcd` and `hcwallet` listen on?
 
-> `dcrd`
+> `hcd`
 
 |             |Mainet|Testnet|Simnet
 ---           |---   |---    |---
 *Peer to Peer*| 9108 | 19108 | 18555
 *RPC Server*  | 9109 | 19109 | 19556
 
-> `dcrwallet`
+> `hcwallet`
 
 |                |Mainet|Testnet|Simnet
 ---              |---   |---    |---
@@ -20,16 +20,16 @@
 
 ---
 
-#### 2. What do you mean by configuration files for `dcrd`, `dcrwallet`, and `dcrctl`? 
+#### 2. What do you mean by configuration files for `hcd`, `hcwallet`, and `hcctl`? 
 
-Each application (`dcrd`, `dcrwallet`, `dcrctl`) can have its own configuration files[^9055]. Use `-h` and look at the path in parentheses of the configuration file option (`-C`, `--configfile`) to see the default path. Create a text file at the path and named according to that path you just looked up.
+Each application (`hcd`, `hcwallet`, `hcctl`) can have its own configuration files[^9055]. Use `-h` and look at the path in parentheses of the configuration file option (`-C`, `--configfile`) to see the default path. Create a text file at the path and named according to that path you just looked up.
 
-Then you can use the `dcrd` [sample config file](https://github.com/decred/dcrd/blob/master/sample-dcrd.conf) and `dcrwallet` [sample config file](https://github.com/decred/dcrwallet/blob/master/sample-dcrwallet.conf) to set whatever options you want. You can do the same thing for `dcrctl` too. The format is the same. Every command line option listed by `-h` can be specified in the config files (just use the long option name).
+Then you can use the `hcd` [sample config file](https://github.com/decred/hcd/blob/master/sample-hcd.conf) and `hcwallet` [sample config file](https://github.com/decred/hcwallet/blob/master/sample-hcwallet.conf) to set whatever options you want. You can do the same thing for `hcctl` too. The format is the same. Every command line option listed by `-h` can be specified in the config files (just use the long option name).
 
-Once those are created and in place, you do not have to add all of the options to the command line all the time. For instance, you can run `dcrctl` without passing in any parameters on the command line:
+Once those are created and in place, you do not have to add all of the options to the command line all the time. For instance, you can run `hcctl` without passing in any parameters on the command line:
 
 ```no-highlight
-dcrctl getnetworkhashps
+hcctl getnetworkhashps
 2547036949350
 ```
 
@@ -37,17 +37,17 @@ dcrctl getnetworkhashps
 
 #### 3. Can I run mainnet and testnet daemons and wallets at the same time and on the same machine? 
 
-Yes[^9264], just add `--testnet` to the appropriate spots (`dcrd`, `dcrwallet`, `dcrctl`) and everything will work. This is why they use different ports and data/log directories!
+Yes[^9264], just add `--testnet` to the appropriate spots (`hcd`, `hcwallet`, `hcctl`) and everything will work. This is why they use different ports and data/log directories!
 
 ---
 
-#### 4. What are the security implications of using the same RPC server authentication passwords with `dcrd` and `dcrwallet`? 
+#### 4. What are the security implications of using the same RPC server authentication passwords with `hcd` and `hcwallet`? 
 
-There is a lot less you can do with access to `dcrd` than you can with access to `dcrwallet`. Importantly, RPC access[^11480] to `dcrwallet`, when the wallet is unlocked, can be used to spend coins.
+There is a lot less you can do with access to `hcd` than you can with access to `hcwallet`. Importantly, RPC access[^11480] to `hcwallet`, when the wallet is unlocked, can be used to spend coins.
 
-When `dcrd` and `dcrwallet` are both on the same machine, it probably does not matter all that much, but when you are running more secure setups where the wallet is on a separate machine than `dcrd`, you would pretty clearly not want to use the same credentials for both. Remember that `dcrd` has to be on an Internet-facing machine in order to stay synced to the network (download the block chain data, broadcast transactions, and so on).
+When `hcd` and `hcwallet` are both on the same machine, it probably does not matter all that much, but when you are running more secure setups where the wallet is on a separate machine than `hcd`, you would pretty clearly not want to use the same credentials for both. Remember that `hcd` has to be on an Internet-facing machine in order to stay synced to the network (download the block chain data, broadcast transactions, and so on).
 
-On the other hand, the `dcrwallet` that contains your funds, for best security, should really not be on a system that has Internet access as it is significantly more difficult for someone to steal your coins if the wallet that contains them is not even on a machine that is accessible via the Internet. Obviously, if you are staking your coins, you will need at least one Internet-facing `dcrwallet` instance. Thus, the most secure setup involves having one "cold" `dcrwallet` instance that is on a machine that is not Internet-accessible, and a second "hot" `dcrwallet` instance (using a different seed of course) to which the cold dcrwallet instance delegates voting right via the `--ticketaddress` parameter, both of which use different credentials.
+On the other hand, the `hcwallet` that contains your funds, for best security, should really not be on a system that has Internet access as it is significantly more difficult for someone to steal your coins if the wallet that contains them is not even on a machine that is accessible via the Internet. Obviously, if you are staking your coins, you will need at least one Internet-facing `hcwallet` instance. Thus, the most secure setup involves having one "cold" `hcwallet` instance that is on a machine that is not Internet-accessible, and a second "hot" `hcwallet` instance (using a different seed of course) to which the cold hcwallet instance delegates voting right via the `--ticketaddress` parameter, both of which use different credentials.
 
 ---
 
@@ -59,7 +59,7 @@ On the other hand, increasing your maximum connections, which really just increa
 
 ---
 
-## <img class="dcr-icon" src="/img/dcr-icons/Sources.svg" /> Sources 
+## <img class="hc-icon" src="/img/hc-icons/Sources.svg" /> Sources 
 
 [^8929]: Decred Forum, [Post 8,929](https://forum.decred.org/threads/600/#post-8929)
 [^9055]: Decred Forum, [Post 9,062](https://forum.decred.org/threads/472/page-12#post-9062)

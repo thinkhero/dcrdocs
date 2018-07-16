@@ -10,7 +10,7 @@ The coinbase maturity is 256 blocks[^16085]. That means the coins will not show 
 
 #### 2. How do I find out which block I mined? 
 
-There will be an entry in the `dcrd` log[^16093] that looks something like:
+There will be an entry in the `hcd` log[^16093] that looks something like:
 
 ```no-highlight
 Accepted block 000... via getwork.

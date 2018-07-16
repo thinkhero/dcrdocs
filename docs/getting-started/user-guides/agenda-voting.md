@@ -10,7 +10,7 @@ This page is intended to give a brief introduction to how agenda voting works an
 
 There is a two-phase process for voting to implement consensus changes that would create a hard forking scenario.
 
-First, it's important to note that the Decred blockchain has specifically designated two different block intervals for the voting process. There is a **Stake Version Interval** (**SVI**) of 2016 blocks (~1 week) and a **Rule Change Interval** (**RCI**) of 8064 blocks (~4 weeks). 4 Stake Version Intervals fit within 1 Rule Change Interval.
+First, it's important to note that the Coolsnady blockchain has specifically designated two different block intervals for the voting process. There is a **Stake Version Interval** (**SVI**) of 2016 blocks (~1 week) and a **Rule Change Interval** (**RCI**) of 8064 blocks (~4 weeks). 4 Stake Version Intervals fit within 1 Rule Change Interval.
 
 The first step of the voting process is to meet the upgrade threshold on the network. After the hard fork code is released (such as the sdiff algorithm change in v1.0.0), a majority of the nodes on the network participating in PoW/PoS need to first upgrade before the voting can be scheduled to begin. For Proof-of-Work, at least 95% of the 1000 most recent blocks must have the latest block version. For Proof-of-Stake, 75% of the votes cast within a single **SVI** must have the latest vote version. Once miner and voter upgrade thresholds are met, the voting is scheduled to begin on the first block of the next **RCI** (due to there being 4 **SVI**s per **RCI**, it can take up to 6048 blocks [3 **SVI**s] for the next **RCI** to begin).
 
@@ -86,7 +86,7 @@ Specifies a proposed replacement algorithm for determining the stake difficulty 
 
 Request developers begin work on Lightning Network (LN) integration
 
-The Lightning Network is the most directly useful application of smart contracts to date since it allows for off-chain transactions that optionally settle on-chain. This infrastructure has clear benefits for both scaling and privacy. Decred is optimally positioned for this integration.
+The Lightning Network is the most directly useful application of smart contracts to date since it allows for off-chain transactions that optionally settle on-chain. This infrastructure has clear benefits for both scaling and privacy. Coolsnady is optimally positioned for this integration.
 
 ##Voting Results:
 
@@ -106,7 +106,7 @@ The Lightning Network is the most directly useful application of smart contracts
 
 Enable features defined in [DCP0002](https://github.com/decred/dcps/blob/master/dcp-0002/dcp-0002.mediawiki) and [DCP0003](https://github.com/decred/dcps/blob/master/dcp-0003/dcp-0003.mediawiki) necessary to support Lightning Network (LN)
 
-The Lightning Network is the most directly useful application of smart contracts to date since it allows for off-chain transactions that optionally settle on-chain. This infrastructure has clear benefits for both scaling and privacy. Decred is optimally positioned for this integration.
+The Lightning Network is the most directly useful application of smart contracts to date since it allows for off-chain transactions that optionally settle on-chain. This infrastructure has clear benefits for both scaling and privacy. Coolsnady is optimally positioned for this integration.
 
 Block 205189 is the first block which contains the new opcode which was voted in via the lnfeatures vote and thus all old nodes must upgrade.
 

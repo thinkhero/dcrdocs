@@ -38,24 +38,24 @@ Make sure all of the words are on a single line separated by spaces[^10657]. Eve
 
 #### 6. How do I import a key that is in wallet import format (WIF)? 
 
-It is possible to import a standalone private key[^10724] into `dcrwallet`. Note that this is only for `--noseed` addresses and you should not run this unless you know what you are doing!
+It is possible to import a standalone private key[^10724] into `hcwallet`. Note that this is only for `--noseed` addresses and you should not run this unless you know what you are doing!
 
 Unlock the wallet (ignore angle brackets):
 
 ```no-highlight
-dcrctl --wallet walletpassphrase <private encryption passphrase> 60
+hcctl --wallet walletpassphrase <private encryption passphrase> 60
 ```
 
 Import the standalone (`--noseed`) private key (ignore angle brackets):
 
 ```no-highlight
-dcrctl --wallet importprivkey <put WIF private key here>
+hcctl --wallet importprivkey <put WIF private key here>
 ```
 
-View balance of imported account (give it some time to rescan and look at the log in dcrwallet to see rescan progress):
+View balance of imported account (give it some time to rescan and look at the log in hcwallet to see rescan progress):
 
 ```no-highlight
-dcrctl --wallet getbalance "imported" 0 all
+hcctl --wallet getbalance "imported" 0 all
 ```
 
 ---

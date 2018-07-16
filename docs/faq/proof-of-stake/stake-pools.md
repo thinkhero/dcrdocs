@@ -11,7 +11,7 @@ being missed because one wallet is down. It also reduces latency between the wal
 
 #### 2. Does a stakepool split the reward between all participants (% based on the amount of tickets you submitted to the pool)? 
 
-It is technically possible to create a pool that supports proportional reward splitting[^9262], but the current stakepool reference implementation `dcrstakepool` doesn’t enable this. It simply votes on your behalf. It does this by making the ticket voting rights a 1-of-2 multi-signature P2SH script. The pool signs the vote with its private key at the time the ticket is selected. Since it is a 1-of-2 multi-signature script though, it means if the pool failed to vote for you for whatever reason (extremely unlikely as the mainnet pool will have multiple redundancy and automatic failover), it would still be possible to vote on your own behalf because you have the second private key and could therefore provide a valid signature and satisfy the 1-of-2 requirement.
+It is technically possible to create a pool that supports proportional reward splitting[^9262], but the current stakepool reference implementation `hcstakepool` doesn’t enable this. It simply votes on your behalf. It does this by making the ticket voting rights a 1-of-2 multi-signature P2SH script. The pool signs the vote with its private key at the time the ticket is selected. Since it is a 1-of-2 multi-signature script though, it means if the pool failed to vote for you for whatever reason (extremely unlikely as the mainnet pool will have multiple redundancy and automatic failover), it would still be possible to vote on your own behalf because you have the second private key and could therefore provide a valid signature and satisfy the 1-of-2 requirement.
 
 Also, it is important to note that the original ticket purchase contains a commitment to go to a reward address for which only you have the private key. The proof-of-stake voting consensus rules enforce the commitment, so it is impossible for the pool to steal your funds.
 
@@ -57,9 +57,9 @@ Continue to [PoS Voting Tickets FAQ](/faq/proof-of-stake/voting-tickets.md)
 
 ## <img class="dcr-icon" src="/img/dcr-icons/Sources.svg" /> Sources 
 
-[^9262]: Decred Forum, [Post 9,262](https://forum.decred.org/threads/626/#post-9262)
-[^9274]: Decred Forum, [Post 9,274](https://forum.decred.org/threads/626/#post-9274)
-[^9311]: Decred Forum, [Post 9,311](https://forum.decred.org/threads/582/page-2#post-9311)
-[^13607]: Decred Forum, [Post 13,607](https://forum.decred.org/threads/1236/#post-13607)
-[^14593]: Decred Forum, [Post 14,593](https://forum.decred.org/threads/1321/#post-14593)
-[^17515]: Decred Forum, [Post 17,515](https://forum.decred.org/threads/1289/#post-17515)
+[^9262]: coolsnady Forum, [Post 9,262](https://forum.decred.org/threads/626/#post-9262)
+[^9274]: coolsnady Forum, [Post 9,274](https://forum.decred.org/threads/626/#post-9274)
+[^9311]: coolsnady Forum, [Post 9,311](https://forum.decred.org/threads/582/page-2#post-9311)
+[^13607]: coolsnady Forum, [Post 13,607](https://forum.decred.org/threads/1236/#post-13607)
+[^14593]: coolsnady Forum, [Post 14,593](https://forum.decred.org/threads/1321/#post-14593)
+[^17515]: coolsnady Forum, [Post 17,515](https://forum.decred.org/threads/1289/#post-17515)

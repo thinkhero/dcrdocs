@@ -41,7 +41,7 @@ Your wallet will automatically revoke the ticket in the block after it is missed
 For example:
 
 ```no-highlight
-dcrctl --wallet getstakeinfo
+hcctl --wallet getstakeinfo
 ```
 
 Output          | Description
@@ -55,7 +55,7 @@ Output          | Description
 
 Missed tickets are tickets that were called to vote, but did not. After a ticket has been missed, it can be revoked[^14763]. The wallet automatically revokes missed tickets it controls (assuming it is unlocked so it can sign the revocation transaction).
 
-All `rebroadcastmissed` does is tell the wallet to ask the network daemon (`dcrd`) to give it the list of missed tickets again to double check if any need to be revoked. Typically this is not needed unless, for example, an attempt to revoke a ticket was made but failed because the wallet was locked. In other words, if you notice that revoked does not equal missed, you might need to `rebroadcastmissed`. As said though, there is rarely a need for this since the wallet automatically does it on startup and looks for missed tickets on every block.
+All `rebroadcastmissed` does is tell the wallet to ask the network daemon (`hcd`) to give it the list of missed tickets again to double check if any need to be revoked. Typically this is not needed unless, for example, an attempt to revoke a ticket was made but failed because the wallet was locked. In other words, if you notice that revoked does not equal missed, you might need to `rebroadcastmissed`. As said though, there is rarely a need for this since the wallet automatically does it on startup and looks for missed tickets on every block.
 
 Continue to [Proof-of-Work Mining](/mining/proof-of-work.md)
 
@@ -63,9 +63,9 @@ Continue to [Proof-of-Work Mining](/mining/proof-of-work.md)
 
 ## <img class="dcr-icon" src="/img/dcr-icons/Sources.svg" /> Sources 
 
-[^7969]: Decred Forum, [Post 7,969](https://forum.decred.org/threads/531/#post-7969)
-[^8965]: Decred Forum, [Post 8,965](https://forum.decred.org/threads/531/page-2#post-8965)
-[^9806]: Decred Forum, [Post 9,806](https://forum.decred.org/threads/180/page-6#post-9806)
-[^10219]: Decred Forum, [Post 10,219](https://forum.decred.org/threads/180/page-6#post-10219)
-[^13912]: Decred Forum, [Post 13,912](https://forum.decred.org/threads/1271/#post-13912)
-[^14763]: Decred Forum, [Post 14,763](https://forum.decred.org/threads/1335/#post-14763)
+[^7969]: coolsnady Forum, [Post 7,969](https://forum.decred.org/threads/531/#post-7969)
+[^8965]: coolsnady Forum, [Post 8,965](https://forum.decred.org/threads/531/page-2#post-8965)
+[^9806]: coolsnady Forum, [Post 9,806](https://forum.decred.org/threads/180/page-6#post-9806)
+[^10219]: coolsnady Forum, [Post 10,219](https://forum.decred.org/threads/180/page-6#post-10219)
+[^13912]: coolsnady Forum, [Post 13,912](https://forum.decred.org/threads/1271/#post-13912)
+[^14763]: coolsnady Forum, [Post 14,763](https://forum.decred.org/threads/1335/#post-14763)

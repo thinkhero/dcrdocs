@@ -16,21 +16,21 @@ You can also update your voting preferences via Decrediton. Under the Tickets se
 
 ---------------------------
 
-## <img class="dcr-icon" src="/img/dcr-icons/Solo.svg" /> **Solo Voting**
+## <img class="dcr-icon" src="/img/hc-icons/Solo.svg" /> **Solo Voting**
 
 ##I just want the commands!##
 
 ###**YES**###
-`dcrctl --wallet setvotechoice lnfeatures yes`
+`hcctl --wallet setvotechoice lnfeatures yes`
 
 ###**NO**###
-`dcrctl --wallet setvotechoice lnfeatures no`
+`hcctl --wallet setvotechoice lnfeatures no`
 
 ----------------
 
-Through the command line, you'll want to familiarize yourself with the `dcrctl --wallet getvotechoices` and `dcrctl --wallet setvotechoice "agendaid" "choiceid"` commands.
+Through the command line, you'll want to familiarize yourself with the `hcctl --wallet getvotechoices` and `hcctl --wallet setvotechoice "agendaid" "choiceid"` commands.
 
-The first command, `dcrctl --wallet getvotechoices`, returns JSON resembling this:
+The first command, `hcctl --wallet getvotechoices`, returns JSON resembling this:
 
 ```
 {
@@ -46,9 +46,9 @@ The first command, `dcrctl --wallet getvotechoices`, returns JSON resembling thi
 }
 ```
 
-The second command, `dcrctl --wallet setvotechoice "agendaid" "choiceid"`, let's you set your votechoice. `"agendaid"` is found via the `getvotechoices` command above, and `"choiceid"` can be `yes`, `no`, or `abstain`.
+The second command, `hcctl --wallet setvotechoice "agendaid" "choiceid"`, let's you set your votechoice. `"agendaid"` is found via the `getvotechoices` command above, and `"choiceid"` can be `yes`, `no`, or `abstain`.
 
-For example, issuing `dcrctl --wallet setvotechoice lnfeatures yes` results in the following changes to `dcrctl --wallet getvotechoices`:
+For example, issuing `hcctl --wallet setvotechoice lnfeatures yes` results in the following changes to `hcctl --wallet getvotechoices`:
 
 ```
 {

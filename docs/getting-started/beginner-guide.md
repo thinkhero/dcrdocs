@@ -8,7 +8,7 @@ Last updated for v1.0.1
 
 Welcome to Coolsnady! We are very glad to have you. As you may or may not already know, Coolsnady is different. There's a lot of new things to learn to fully grasp how things work. This documentation will attempt to make things a bit easier to understand.
 
-This beginner's guide is a path to getting the Coolsnady software up and running. You can choose from multiple clients to get a node on the network and Coolsnady in your wallet. Specifically, you'll learn how to install, setup, and use the Coolsnady applications; how to obtain DCR; how to vote via Proof-of-Stake; and how to use the block explorer.
+This beginner's guide is a path to getting the Coolsnady software up and running. You can choose from multiple clients to get a node on the network and Coolsnady in your wallet. Specifically, you'll learn how to install, setup, and use the Coolsnady applications; how to obtain hc; how to vote via Proof-of-Stake; and how to use the block explorer.
 
 You'll need to follow an [Installation Guide](#installation-guides), and then follow the path for the application of your choice below. After your application is set-up, go through the [General Guides](#general-guides) at the bottom of this page. If you have any questions along the way, join us in our [Slack](/support-directory.md#join-us-on-slack).
 
@@ -41,7 +41,7 @@ Note: You might soon notice one of the many differences between Coolsnady and ot
 popular cryptocurrencies: the wallet daemon and node daemon are separate.
 A lot of other coins run these functions together in a single daemon.
 For those who choose to use the command line interfaces, this means you must
-run `hcd` for full node functionality, and `hcwallet` to store your DCR,
+run `hcd` for full node functionality, and `hcwallet` to store your hc,
 create transactions and participate in Proof-of-Stake mining/voting.
 
 ---

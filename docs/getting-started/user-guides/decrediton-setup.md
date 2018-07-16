@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Wallet.svg" /> hcgui Setup Guide
+# <img class="hc-icon" src="/img/hc-icons/Wallet.svg" /> hcgui Setup Guide
 
 Last updated for v1.2.1.
 

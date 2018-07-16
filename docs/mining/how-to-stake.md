@@ -6,24 +6,24 @@ Last updated for v1.1.3
 
 ## How to Stake
 
-Participating in proof-of-stake requires a Decred wallet to be running 24/7. The wallet needs to be always online so that it can be called to vote - if the wallet is unavailable then the votes will be missed and no block reward will be received.
+Participating in proof-of-stake requires a coolsnady wallet to be running 24/7. The wallet needs to be always online so that it can be called to vote - if the wallet is unavailable then the votes will be missed and no block reward will be received.
 
 Running your own always-online wallet is known as "Solo" staking/mining.
 
-Stakepools are available for those unable to keep a personal voting wallet online. Using a stakepool is completely safe, the Decred PoS protocol allows you to delegate your vote to a stakepool's always-online wallet without ever giving the stakepool access to your funds.
+Stakepools are available for those unable to keep a personal voting wallet online. Using a stakepool is completely safe, the coolsnady PoS protocol allows you to delegate your vote to a stakepool's always-online wallet without ever giving the stakepool access to your funds.
 
 ---
 
 ## <img class="dcr-icon" src="/img/dcr-icons/Solo.svg" /> Solo PoS
 
-Solo mining is currently only possible using the Decred command line tools. The [Buying Tickets with dcrwallet](/getting-started/user-guides/dcrwallet-tickets.md) guide explains how to buy tickets using the CLI wallet `dcrwallet`.
+Solo mining is currently only possible using the Coolsnady command line tools. The [Buying Tickets with HCWALLET](/getting-started/user-guides/dcrwallet-tickets.md) guide explains how to buy tickets using the CLI wallet `HCWALLET`.
 
 ---
 
 ## <img class="dcr-icon" src="/img/dcr-icons/Pool.svg" /> PoS using a Stakepool
 
 You can find the list of all official stakepools and statistics by visiting the
-[:fa-external-link-square: Decred website](https://decred.org/stakepools/).
+[:fa-external-link-square: coolsnady website](https://coolsnady.org/stakepools/).
 
 Using a stakepool DOES NOT give the pool access to your funds. All you are doing is granting voting rights to the pool.
 
@@ -35,5 +35,5 @@ Sometimes they will find a solution to the blocks so quickly that votes haven't 
 
 There are currently two wallets which support stakepool voting:
 
-- `Decrediton` - GUI wallet for Windows/macOS/Linux. The [Purchase Tickets tab](/getting-started/user-guides/using-decrediton.md#tickets) is used to buy tickets.
-- `dcrwallet` - CLI wallet for Windows/macOS/Linux. The [Buying Tickets with dcrwallet](/getting-started/user-guides/dcrwallet-tickets.md) guide explains how to purchase tickets via command line.
+- `Hcgui` - GUI wallet for Windows/macOS/Linux. The [Purchase Tickets tab](/getting-started/user-guides/using-decrediton.md#tickets) is used to buy tickets.
+- `HCWALLET` - CLI wallet for Windows/macOS/Linux. The [Buying Tickets with HCWALLET](/getting-started/user-guides/dcrwallet-tickets.md) guide explains how to purchase tickets via command line.

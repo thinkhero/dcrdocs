@@ -14,7 +14,7 @@ The stake pool, on the other hand, allows you to delegate your voting rights to 
 
 #### 2. Isn't one of the main reasons for stake mining to ensure there are always a sufficient amount of peers online? 
 
-Definitely not[^9311]. Stake mining cannot possibly enforce that. An SPV style wallet could easily perform the necessary staking by communicating with other full nodes (`dcrd` instances) on the network. It is true that the current wallet requires `dcrd` to be running, but that will not always be the case.
+Definitely not[^9311]. Stake mining cannot possibly enforce that. An SPV style wallet could easily perform the necessary staking by communicating with other full nodes (`hcd` instances) on the network. It is true that the current wallet requires `hcd` to be running, but that will not always be the case.
 
 Even if the software did try to enforce that, you could not stop people from writing utilities and such to do it via the peer-to-peer network without needing to run their own local instance anyways.
 
@@ -44,7 +44,7 @@ Continue to [Stake Pools FAQ](/faq/proof-of-stake/stake-pools.md)
 
 ## <img class="dcr-icon" src="/img/dcr-icons/Sources.svg" /> Sources 
 
-[^9304]: Decred Forum, [Post 9,304](https://forum.decred.org/threads/626/page-2#post-9304)
-[^9311]: Decred Forum, [Post 9,311](https://forum.decred.org/threads/582/page-2#post-9311)
-[^9806]: Decred Forum, [Post 9,806](https://forum.decred.org/threads/180/page-6#post-9806)
-[^12697]: Decred Forum, [Post 12,697](https://forum.decred.org/threads/1127/#post-12697)
+[^9304]: coolsnady Forum, [Post 9,304](https://forum.decred.org/threads/626/page-2#post-9304)
+[^9311]: coolsnady Forum, [Post 9,311](https://forum.decred.org/threads/582/page-2#post-9311)
+[^9806]: coolsnady Forum, [Post 9,806](https://forum.decred.org/threads/180/page-6#post-9806)
+[^12697]: coolsnady Forum, [Post 12,697](https://forum.decred.org/threads/1127/#post-12697)

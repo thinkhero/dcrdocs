@@ -8,7 +8,7 @@ Last updated for gominer v1.0.0.
 
 ## :fa-download: Download and Extract *gominer*
 
-Visit [https://github.com/decred/decred-binaries/releases/tag/v1.0.0](https://github.com/decred/decred-binaries/releases/tag/v1.0.0) to download the gominer binaries. Within the "Downloads" section you should see the following files:
+Visit [https://github.com/coolsnady/coolsnady-binaries/releases/tag/v1.0.0](https://github.com/decred/decred-binaries/releases/tag/v1.0.0) to download the gominer binaries. Within the "Downloads" section you should see the following files:
 
 - `gominer-windows-amd64-cuda-v1.0.0.zip`
 - `gominer-windows-amd64-opencl-v1.0.0.zip`
@@ -36,15 +36,15 @@ For the CUDA version, the CUDA runtime library is now included.  The files in th
 
 Before we begin this step, it is important that you've already signed up for a mining pool account (if required by your chosen mining pool, you'll have to create a worker at the pool's website). Record your worker's login and password, and the pool's stratum+tcp address:port for later use.
 
-If this is new to you, here are a few guides for creating workers on some of the Decred mining pools.
+If this is new to you, here are a few guides for creating workers on some of the coolsnady mining pools.
 
 !!! warning "Warning"
-    Do not forget the PIN you set during account creation - you will be unable to withdraw any mined DCR without it
+    Do not forget the PIN you set during account creation - you will be unable to withdraw any mined HC without it
 
-- [https://dcr.maxminers.net/index.php?page=gettingstarted](https://dcr.maxminers.net/index.php?page=gettingstarted)
-- [https://dcr.suprnova.cc/index.php?page=gettingstarted](https://dcr.suprnova.cc/index.php?page=gettingstarted)
-- [https://www2.coinmine.pl/dcr/index.php?page=gettingstarted](https://www2.coinmine.pl/dcr/index.php?page=gettingstarted)
-- [https://pool.mn/dcr/index.php?page=gettingstarted](https://pool.mn/dcr/index.php?page=gettingstarted)
+- [https://hc.maxminers.net/index.php?page=gettingstarted](https://dcr.maxminers.net/index.php?page=gettingstarted)
+- [https://hc.suprnova.cc/index.php?page=gettingstarted](https://dcr.suprnova.cc/index.php?page=gettingstarted)
+- [https://www2.coinmine.pl/hc/index.php?page=gettingstarted](https://www2.coinmine.pl/dcr/index.php?page=gettingstarted)
+- [https://pool.mn/hc/index.php?page=gettingstarted](https://pool.mn/dcr/index.php?page=gettingstarted)
 
 ### Step 2: Verify Device ID
 
@@ -68,7 +68,7 @@ Within the "General settings" section:
 
 Within the "Mining settings" section:
 
-- set `pool=` to the stratum+tcp address:port of the mining pool of your choice, e.g. decredpool.org uses `stratum+tcp://stratum.decredpool.org:3333` (WARNING: the http://address:port will not work with gominer - stratum+tcp *must* be used).
+- set `pool=` to the stratum+tcp address:port of the mining pool of your choice, e.g. coolsnadypool.org uses `stratum+tcp://stratum.coolsnadypool.org:3333` (WARNING: the http://address:port will not work with gominer - stratum+tcp *must* be used).
 - set `pooluser=` to your worker's login.
 - set `poolpass=` to your worker's password.
 
@@ -102,7 +102,7 @@ If both of the above issues exist, it is likely that the configuration file is i
 
 ## Familiarize Yourself with Your Pool's Website
 
-Now that your gominer is hashing away for you, you have time to check out your pool's website. Most pools have a dashboard on their website that you can use to find statistics about the pool, the network, and the current round (time elapsed between each block found by the pool). Also, once you receive a large enough payout, you can withdraw your coins through the Edit Account page by setting a DCR Payment Address and either setting an Automatic Payout threshold, or choosing to Cash Out your total account balance.
+Now that your gominer is hashing away for you, you have time to check out your pool's website. Most pools have a dashboard on their website that you can use to find statistics about the pool, the network, and the current round (time elapsed between each block found by the pool). Also, once you receive a large enough payout, you can withdraw your coins through the Edit Account page by setting a HC Payment Address and either setting an Automatic Payout threshold, or choosing to Cash Out your total account balance.
 
 ---
 
